@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium TestNG Automation" parallel="tests" thread-count="3">
+	<listeners>
+		<listener class-name="listeners.Listeners"/>
+	</listeners>
+	
+	<test name="Chrome Browser Test">
+		<parameter name="url" value="https://phptravels.com/demo/"/>
+		<classes>
+			<class name="testCases.TestOne" />
+		</classes>
+	</test>
+
+	<test name="Firefox Browser Test">
+		<parameter name="url" value="https://phptravels.com/demo/"/>
+		<classes>
+			<class name="testCases.TestTwo" />
+		</classes>
+	</test>
+
+</suite>
